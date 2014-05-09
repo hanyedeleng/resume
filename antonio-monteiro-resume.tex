@@ -1,0 +1,154 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+
+
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{António Nuno Monteiro}{August 13, 1990}{Last update on \today}
+
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:anmonteiro.at.gmail.dot.com}{anmonteiro\mbox{}@\mbox{}gmail.com}\sbull
+\textsmaller{+}351.937557510\sbull
+%{\newnums cies010} \emph{(Skype)}\sbull
+{\newnums anmonteiro} \emph{(GitHub)}\sbull
+\href{http://www.linkedin.com/in/anmonteiro}{www.linkedin.com/in/anmonteiro}
+\\
+Vale Grou de Cima, 4\sbull
+2815-658\sbull
+%2815-658\thinspace {\large \sc ld}\sbull
+Sobreda de Caparica\sbull
+Portugal
+
+\spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Summary}  % a root section title
+
+\vspace{-1.3em}  % some vertical spacing
+\begin{multicols}{2}  % open a multicolumn environment
+\noindent \emph{Creative geek with roots in the open source movement, an entrepreneurial mindset and a passion for delivering value by developing maintainable software.}
+\\
+\\
+At the age of seven (1989) Cies wrote his first lines of code in a \acr{LOGO}-like language on an \acr{MSX} (pre-\acr{PC}).  Two years later he attended a conference on an emerging new technology, the Internet, at the Erasmus University from which he would graduate 16 years later.
+
+After being introduced to the open source movement in 1997, he taught himself a variety of skills including system administration and programming (Bash, Python, Ruby \& \CPP).  By 2002 he got his pet project \acr{KT}urtle ---a zero-entry-barrier programming environment--- included into \acr{KDE}'s \emph{edu} module, and thereby almost every Linux distribution.
+
+From 2003 to 2007 he studied at the Erasmus University Rotterdam and graduated in \emph{Business and Computer Science} (one curriculum).  After graduation he travelled Europe and Asia during a two year sabbatical, on which he ``hustled'' several IT gigs (see experiences below) to extend the journey.
+\end{multicols}
+
+
+\spacedhrule{0em}{-0.4em}
+
+\roottitle{Experience}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.safira.pt}{Safira}}
+  {\textsc{Lisbon, Portugal}} {%
+  \headedsubsection
+    {Software Developer}
+    {Sep \apo13 -- present}
+    {\bodytext{Safira is a gold IBM partner.}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {\href{http://www.cmvm.pt}{CMVM - Comissão do Mercado de Valores Mobiliários}}
+  {\textsc{Lisbon, Portugal}} {%
+  \headedsubsection
+    {Summer Intern}
+    {Jul \apo13 -- Sep \apo13}
+    {\bodytext{CMVM, the Portuguese Securities Market Commission, is responsible for supervising and regulating securities and other financial instruments markets (traditionally known as ``stock markets``) in Portugal. The summer internship was focused on helping implementing the \href{http://www.itil-officialsite.com/}{ITIL} standard within the IT department of the organisation.}}
+}
+
+\vspace{-0.2em}
+\begin{center}
+  \emph{\small Please refer to my \href{http://www.linkedin.com/in/anmonteiro}{LinkedIn profile} for a more complete list of work experiences along with recommendations.}
+\end{center}
+
+
+\spacedhrule{-0.2em}{-0.4em}
+
+\roottitle{Education}
+
+\headedsection
+  {\href{http://www.fct.unl.pt}{Faculdade de Ciências e Tecnologia - UNL}}
+  {\textsc{Caparica, Portugal}} {%
+  \headedsubsection
+    {Bachelor's degree in Computer Science \& Engineering}
+    {2010 -- 2014}
+    {\bodytext{Focused on the economics of open source, rapid application development (\acr{RAD}) and the semantic web technology stack (\acr{RDF}/\acr{RDFS}, \acr{OWL} and \acr{SPARQL}).  Picked up quite some Java skills along the way.}}
+}
+
+\headedsection
+  {\href{http://www.esfmp.pt}{Escola Secundária Fernão Mendes Pinto}}
+  {\textsc{Almada, Portugal}} {%
+  \headedsubsection
+    {Science and Technology \textnormal{~(pre-university secondary education)}}
+    {2002 -- 2008} {}
+}
+
+\headedsection
+  {\href{http://www.academiaam.com/}{Academia de Amadores de Música}}
+  {\textsc{Lisbon, Portugal}} {%
+  \headedsubsection
+    {Musical Theory / Piano / Analysis and Techniques of Composition}
+    {1999 -- 2008}
+    {\bodytext{Focused on the economics of open source, rapid application development (\acr{RAD}) and the semantic web technology stack (\acr{RDF}/\acr{RDFS}, \acr{OWL} and \acr{SPARQL}).  Picked up quite some Java skills along the way.}}
+}
+
+
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Skills}
+
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+  {Technical expertise:}
+  {Software design and development, with(in) a team.  Big fan of Agile and XP (Extreme Programming) methodologies, TDD (BDD).  Loves writing Javascript/\nsp Java/\nsp Python, and has been appreciating functional languages such as Clojure/\nsp ClojureScript further and further.  Solid knowledge of web technologies:\ \acr{HTML5}, \acr{CSS3}, \acr{XML}, \acr{REST}, \acr{SOAP}, \acr{JSON} and JavaScript (mostly ECMAScript 5.1, Node.js and jQuery).}
+
+\vspace{0.5em}
+\inlineheadsection
+  {Natural languages:}
+  {Portuguese \emph{(mother tongue)}, English \emph{(native or bilingual proficiency)}, French \emph{(limited working proficiency)}.}
+
+
+\spacedhrule{1.6em}{-0.4em}
+
+\roottitle{Interests}
+
+\inlineheadsection
+  {Non-exhaustive and in alphabetical order:}
+  {art, Buddhism, cryptography, Go (board game), history, music, open source, philosophy, software engineering (methodologies), travel, typography (e.g.\ graphic design, \LaTeX), \acr{UI}/\acr{UX}-design and vegetarian/vegan cooking.}
+
+
+\end{document}
